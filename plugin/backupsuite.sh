@@ -26,7 +26,7 @@ else
 	LS2="-l"
 fi
 
-PYVERSION=$(python -V 2>&1 | awk '{print $2}')
+PYVERSION=$(python -V 2>&1 | python3 -V 2>&1 | awk '{print $2}')
 case $PYVERSION in
 	2.*)
 		PYEXT=pyo

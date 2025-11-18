@@ -21,7 +21,7 @@ if [ -d "/usr/lib64" ]; then
 else
 	LIBDIR="/usr/lib"
 fi
-PYVERSION=$(python -V 2>&1 | awk '{print $2}')
+PYVERSION=$(python -V 2>&1 | python3 -V 2>&1 | awk '{print $2}')
 case $PYVERSION in
 	2.*)
 		PYEXT=pyo
